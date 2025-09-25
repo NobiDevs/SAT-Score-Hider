@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h3>SAT Score Hider</h3>
+    </div>
+    <div id="status" class="status">Loading...</div>
+
+    <h4 class="section-title">Settings</h4>
+    <div class="settings-container">
+        <div class="setting-wrapper">
+            <div id="audio-settings-header" class="setting-item is-clickable">
+                <span class="label">Sound</span>
+                <div class="right-content">
+                    <button id="sound-toggle-btn" class="icon-btn" title="Toggle sound">
+                        <svg class="icon-on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg>
+                        <svg class="icon-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"></path></svg>
+                    </button>
+                    <span class="arrow"></span>
+                </div>
+            </div>
+            <div class="collapsible-content"><div class="collapsible-content-inner">
+                <h5 class="subsection-title">COMPOSITE THRESHOLDS</h5>
+                <div id="threshold-list"></div>
+                <div id="threshold-controls">
+                    <button id="add-threshold-btn" class="btn-secondary">Add Threshold</button>
+                    <button id="save-thresholds-btn" class="btn-primary">Save Changes</button>
+                </div>
+
+                <h5 class="subsection-title section-thresholds-title">SECTION THRESHOLDS</h5>
+                <div id="section-threshold-list"></div>
+                <div id="section-threshold-controls">
+                    <button id="add-section-threshold-btn" class="btn-secondary">Add Threshold</button>
+                    <button id="save-section-thresholds-btn" class="btn-primary">Save Changes</button>
+                </div>
+            </div></div>
+        </div>
+
+        <div class="setting-wrapper">
+            <div id="confetti-settings-header" class="setting-item is-clickable">
+                <span class="label">Confetti</span>
+                <div class="right-content">
+                    <button id="confetti-toggle-btn" class="icon-btn" title="Toggle confetti">
+                        <svg class="icon-on" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></svg>
+                        <svg class="icon-off" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-party-popper-icon lucide-party-popper"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></svg>
+                    </button>
+                    <span class="arrow"></span>
+                </div>
+            </div>
+            <div class="collapsible-content"><div class="collapsible-content-inner">
+                <h5 class="subsection-title">COMPOSITE THRESHOLDS</h5>
+                <div id="confetti-threshold-list"></div>
+                <div id="confetti-threshold-controls">
+                    <button id="add-confetti-threshold-btn" class="btn-secondary">Add Threshold</button>
+                    <button id="save-confetti-thresholds-btn" class="btn-primary">Save Changes</button>
+                </div>
+
+                <h5 class="subsection-title section-thresholds-title">SECTION THRESHOLDS</h5>
+                <div id="section-confetti-threshold-list"></div>
+                <div id="section-confetti-threshold-controls">
+                    <button id="add-section-confetti-threshold-btn" class="btn-secondary">Add Threshold</button>
+                    <button id="save-section-confetti-thresholds-btn" class="btn-primary">Save Changes</button>
+                </div>
+            </div></div>
+        </div>
+
+        <div class="setting-wrapper">
+            <div id="storage-settings-header" class="setting-item is-clickable">
+                <span class="label">Storage</span>
+                <div class="right-content">
+                    <span class="arrow"></span>
+                </div>
+            </div>
+            <div class="collapsible-content"><div class="collapsible-content-inner">
+                <div class="sub-setting-item">
+                    <span>Remember Revealed Scores</span>
+                    <button id="persistence-toggle-btn" class="icon-btn" title="Toggle score persistence">
+                        <svg class="icon-on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <svg class="icon-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9 2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+                    </button>
+                </div>
+                <div class="sub-setting-item">
+                    <span>Clear All Extension Data</span>
+                    <button id="clear-data-btn" class="btn-danger">Clear</button>
+                </div>
+            </div></div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button id="showAll" class="btn-primary">Show Scores</button>
+        <button id="hideAll" class="btn-secondary">Hide Scores</button>
+    </div>
+
+    <div class="instructions">
+        <p><strong>How to use:</strong> </p>
+        <p>Click a hidden score button to reveal it.</p>
+        <p><strong>Shortcuts:</strong> </p>
+        <p><span class="keyboard-shortcut">Ctrl+Shift+S</span> to Show All Scores</p>
+        <p><span class="keyboard-shortcut">Ctrl+Shift+H</span> to Hide All Scores</p>
+    </div>
+
+    <div class="disclaimer">
+        <p>SAT® is a trademark registered by Collegeboard, which is not affiliated with, and does not endorse, this product.</p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
