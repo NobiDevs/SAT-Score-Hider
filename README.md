@@ -30,14 +30,14 @@ Hides SAT® scores on the Collegeboard website and allows you to reveal them by 
 
 ### How It Works
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/ae0fe3a4-8709-46c1-9244-16e804c23459" />
+    <img src="https://github.com/user-attachments/assets/473f671f-2dca-4e6c-a09d-69e5aa42c39b9" />
 </p>
 
 ---
 
 1. When you visit an SAT® scores page, the extension automatically scans for score elements
-2. Valid scores are replaced with "?"
-3. Hidden scores have a dashed border and a "?" placeholder
+2. Valid scores are replaced with hidden boxes
+3. Hidden scores have a dashed border and a "Click to reveal score" text
 4. Click any hidden score to reveal it with a sound effect and/or confetti if configured
 5. Customize sound and confetti thresholds in the popup settings
 6. Upload custom MP3 files for personalized sound effects
@@ -78,7 +78,7 @@ Scores not hiding?
 - Verify the content script is running on the page
 
 Can't reveal scores?
-- Make sure you're clicking directly on the "?" text or the circle around it
+- Make sure you're clicking directly on the text or the box around it
 - Try using the "Show All" button in the extension popup
 - Use the keyboard shortcut `Ctrl+Shift+S`
 
